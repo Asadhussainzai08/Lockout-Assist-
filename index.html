@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lockout Assist</title>
+  <meta name="description" content="Operator support workflow prototype: report a vehicle lockout during an active rental, get triaged, and track the case to resolution.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg>
+      </span>
+      <div>
+        <strong>Lockout Assist</strong>
+        <small>Fleet operator support · prototype</small>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Workflow">
+      <button class="tab active" role="tab" data-view="intake"><span class="n">1</span> Report</button>
+      <button class="tab" role="tab" data-view="outcome" disabled><span class="n">2</span> Outcome</button>
+      <button class="tab" role="tab" data-view="tracker"><span class="n">3</span> Tracker <span id="openCount" class="badge"></span></button>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="foot">Prototype with mock reservation and telematics data. Cases are saved in this browser only.</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/triage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
